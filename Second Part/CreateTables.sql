@@ -41,6 +41,7 @@ CREATE TABLE specialities(
 CREATE TABLE departaments(
 	id				INTEGER PRIMARY KEY IDENTITY(0, 1) NOT NULL,
 	faculty_id		INTEGER FOREIGN KEY REFERENCES faculties(id),
+	title			VARCHAR(64),
 	director		VARCHAR(64),
 	contact_mail	VARCHAR(64),
 	contact_phone	VARCHAR(16)
