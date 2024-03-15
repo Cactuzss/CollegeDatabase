@@ -3,9 +3,9 @@ USE _Institute_;
 INSERT INTO specialities(faculty_id, title, qualification)
 	VALUES(
 		(SELECT id FROM faculties WHERE title = 'Факультет информатики'),
-		'Программирование и разработка веб-приложений',
-		'Веб-разработчик'
-	);
+		'Программирование и разработка риложений',
+		'Разработчик программного обеспечения'
+		);
 
 INSERT INTO specialities(faculty_id, title, qualification)
 	VALUES(
