@@ -27,7 +27,8 @@ CREATE TABLE buildings(
 	faculty_id		INTEGER FOREIGN KEY REFERENCES faculties(id),
 	director_name	VARCHAR(64),
 	contact_mail	VARCHAR(64),
-	contact_phone	VARCHAR(16)
+	contact_phone	VARCHAR(16),
+	adress_id	INTEGER FOREIGN KEY REFERENCES adresses(id),
 );
 
 CREATE TABLE specialities(
