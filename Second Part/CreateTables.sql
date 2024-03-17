@@ -98,5 +98,5 @@ CREATE TABLE disciplines_lecturers(
 CREATE TABLE grades(
 	student_id		INTEGER FOREIGN KEY REFERENCES students(id),
 	discipline_id	INTEGER FOREIGN KEY REFERENCES disciplines(id),
-	result			VARCHAR
+	result			VARCHAR(64)
 );
