@@ -1,0 +1,1 @@
+SELECT CONCAT('Day + 1:     ', DATEADD(day, 1, birth_date)), birth_date FROM students

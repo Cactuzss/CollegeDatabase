@@ -1,0 +1,1 @@
+SELECT UNICODE(title) AS result FROM disciplines;

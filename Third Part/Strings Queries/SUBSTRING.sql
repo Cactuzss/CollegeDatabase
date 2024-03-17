@@ -1,0 +1,1 @@
+SELECT SUBSTRING(contact_phone, 2, 1) AS country_code FROM departaments;

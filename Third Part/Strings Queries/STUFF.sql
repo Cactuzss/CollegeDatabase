@@ -1,0 +1,1 @@
+SELECT STUFF(contact_phone, 3, 8, 'xxxxxxxx') AS country_code FROM departaments;
