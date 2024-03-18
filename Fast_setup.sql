@@ -1,5 +1,7 @@
 -- CREATE DATABASE _Institute_;
 
+-- USE _Institute_;
+
 CREATE TABLE faculties(
 	id				INTEGER PRIMARY KEY IDENTITY(0, 1) NOT NULL,
 	title			VARCHAR(64),

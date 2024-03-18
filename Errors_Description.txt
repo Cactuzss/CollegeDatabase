@@ -1,0 +1,4 @@
+ERROR_CODES [51000; 52000) - incorrect insertion data
+	51001 - Invalid date
+	51002 - Invalid insertion value
+	

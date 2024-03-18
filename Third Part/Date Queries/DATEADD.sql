@@ -1,1 +1,1 @@
-SELECT CONCAT('Day + 1:     ', DATEADD(day, 1, birth_date)), birth_date FROM students
+SELECT DATEADD(day, 1, birth_date) AS day_plus_one, birth_date FROM students
