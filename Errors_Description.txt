@@ -1,4 +1,14 @@
 ERROR_CODES [51000; 52000) - incorrect insertion data
 	51001 - Invalid date
 	51002 - Invalid insertion value
+	51003 - Duplicated row value
+	51004 - Wrong year of studying in groups table
+	51005 - Control forms are immutuable, if you want to change something, disable the trigger
+	51006 - Wrong phone format
 	
+ERROR_CODES [52000; 53000) - incorrect update data
+	52001 - Wrong email format
+	52002 - Invalid insertion value
+	
+ERROR_CODES [53000; 54000) - delete errors
+	53001 - Value is using somewhere else
