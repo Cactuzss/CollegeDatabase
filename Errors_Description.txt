@@ -8,7 +8,8 @@ ERROR_CODES [51000; 52000) - incorrect insertion data
 	
 ERROR_CODES [52000; 53000) - incorrect update data
 	52001 - Wrong email format
-	52002 - Invalid insertion value
+	52002 - Invalid updated value
 	
 ERROR_CODES [53000; 54000) - delete errors
 	53001 - Value is using somewhere else
+	53002 - Value cant be deleted

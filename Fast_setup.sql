@@ -98,6 +98,7 @@ CREATE TABLE disciplines_lecturers(
 );
 
 CREATE TABLE grades(
+  	id 				INTEGER IDENTITY(0, 1) PRIMARY KEY,
 	student_id		INTEGER FOREIGN KEY REFERENCES students(id),
 	discipline_id	INTEGER FOREIGN KEY REFERENCES disciplines(id),
 	result			VARCHAR(64)
