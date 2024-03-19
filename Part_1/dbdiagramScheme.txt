@@ -1,0 +1,102 @@
+Table specialities{
+  id            integer [primary key, not null] 
+  title         varchar
+  faculty_id    integer [ref: > faculties.id]
+  qualification varchar [note: 'who will student be after education']
+}
+
+Table faculties{
+  id            integer [primary key, not null] 
+  title         varchar  
+  dean          varchar
+  contact_mail  varchar
+  contact_phone varchar
+}
+
+Table departaments{
+  id            integer [primary key, not null] 
+  title         varchar 
+  director      varchar
+  faculty_id    integer [ref: > faculties.id]
+  contact_mail  varchar
+  contact_phone varchar
+}
+
+Table groups{
+  id            integer [primary key, not null]
+  speciality_id integer [ref: > specialities.id] 
+  curator_id    integer [ref: > lecturers.id]
+  year_of_study integer
+  headman_id    integer [ref: > students.id]
+}
+
+Table students{
+  id            integer [primary key, not null] 
+  full_name     varchar
+  faculty_id    integer [ref: > faculties.id]
+  speciality_id integer [ref: > specialities.id]
+  birth_date    date
+  contact_mail  varchar
+  contact_phone varchar
+}
+
+Table disciplines{
+  id              integer [primary key, not null] 
+  title           varchar
+  departament_id  integer [ref: > departaments.id]
+  hours           integer
+  description     text
+  control_form_id varchar [ref: > control_forms.id]
+}
+
+Table disciplines_lecturers{
+  lecturer_id   integer [primary key, ref: > lecturers.id, not null]
+  discipline_id integer [primary key, ref: > disciplines.id,  not null]
+}
+
+Table lecturers{
+  id              integer [primary key, not null] 
+  full_name       varchar
+  departament_id  integer [ref: > departaments.id]
+  degree          varchar
+  contact_mail    varchar
+  contact_phone   varchar
+}
+
+Table grades{
+  student_id    integer [ref: > students.id]
+  discipline_id integer [ref: > disciplines.id]
+  result        varchar
+}
+
+Table buildings{
+  id              integer [primary key, not null]
+  faculty_id      integer [ref: > faculties.id]
+  director_name   varchar
+  contact_mail    varchar
+  contact_phone   varchar
+  adress_id       integer [ref: > adresses.id]
+}
+
+Table control_forms{
+  id              integer [primary key, not null]
+  title           varchar
+  description     varchar
+}
+
+Table adresses{
+  id            integer [primary key, not null]
+  city          varchar
+  district      varchar
+  street        varchar
+  house_number  varchar
+}
+
+
+
+
+
+
+
+
+
