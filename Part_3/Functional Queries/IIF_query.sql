@@ -1,0 +1,1 @@
+SELECT *, IIF(id = 1, 'special guy', 'other guys') AS answer FROM groups
