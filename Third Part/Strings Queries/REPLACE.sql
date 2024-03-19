@@ -1,1 +1,0 @@
-SELECT REPLACE(title, 'Python', 'Fortran') AS result FROM disciplines;

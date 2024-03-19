@@ -1,1 +1,0 @@
-SELECT UPPER(full_name) AS result FROM lecturers;

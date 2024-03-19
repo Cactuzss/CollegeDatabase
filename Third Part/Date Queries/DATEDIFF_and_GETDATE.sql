@@ -1,1 +1,0 @@
-SELECT DATEDIFF(year, birth_date, GETDATE()), birth_date FROM students

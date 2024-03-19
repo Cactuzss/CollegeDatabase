@@ -1,1 +1,0 @@
-SELECT CONCAT('Day: ', DATEPART(day, birth_date)), birth_date FROM students
