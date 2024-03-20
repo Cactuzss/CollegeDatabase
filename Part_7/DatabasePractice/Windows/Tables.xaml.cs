@@ -167,16 +167,21 @@ namespace DatabasePractice.Windows
             switch (CurrentState)
             {
                 case GridState.GRADES:
+                    MessageBox.Show("Cant edit the table");
                     break;
                 case GridState.ADRESSES:
+                    Models.adresses adresses = (Models.adresses)Current.SelectedItem;
+                    Stuff.DataVaseAPI.EditAdresses(adresses);
                     break;
                 case GridState.DISCIPLINES:
                     Models.disciplines disciplines = (Models.disciplines)Current.SelectedItem;
                     Stuff.DataVaseAPI.EditDisciplines(disciplines);
                     break;
                 case GridState.FACULTIES:
+                    MessageBox.Show("Cant edit the table");
                     break;
                 case GridState.STUDENTS:
+                    MessageBox.Show("Cant edit the table");
                     break;
 
                 default: break;
@@ -185,7 +190,28 @@ namespace DatabasePractice.Windows
 
         private void DeleteButton(object sender, RoutedEventArgs e)
         {
+            switch (CurrentState)
+            {
+                case GridState.GRADES:
+                    Models.grades grades = (Models.grades)Current.SelectedItem;
+                    Stuff.DataVaseAPI.DeleteGrades(grades);
+                    break;
+                case GridState.ADRESSES:
+                    Models.adresses adresses = (Models.adresses)Current.SelectedItem;
+                    Stuff.DataVaseAPI.DeleteAdresses(adresses);
+                    break;
+                case GridState.DISCIPLINES:
+                    MessageBox.Show("Cant edit the table");
+                    break;
+                case GridState.FACULTIES:
+                    MessageBox.Show("Cant edit the table");
+                    break;
+                case GridState.STUDENTS:
+                    MessageBox.Show("Cant edit the table");
+                    break;
 
+                default: break;
+            }
         }
 
 

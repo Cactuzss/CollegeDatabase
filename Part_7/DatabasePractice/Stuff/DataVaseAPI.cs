@@ -74,6 +74,7 @@ namespace DatabasePractice.Stuff
             }
         }
 
+
         public static bool EditDisciplines(Models.disciplines disc)
         {
             using (ApplicationContext db = new ApplicationContext())
@@ -81,7 +82,61 @@ namespace DatabasePractice.Stuff
                 var entity = db.disciplines.FirstOrDefault(item => item.id == disc.id);
                 if (entity == null) return false;
 
-                entity
+                entity.title = disc.title;
+                entity.hours_of_study = disc.hours_of_study;
+                entity.descript = disc.descript;
+
+                db.SaveChanges();
+
+                return true;
+            }
+        }
+
+        public static bool EditAdresses(Models.adresses disc)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                var entity = db.adresses.FirstOrDefault(item => item.id == disc.id);
+                if (entity == null) return false;
+
+                entity.city = disc.city;
+                entity.district = disc.district;
+                entity.street = disc.street;
+                entity.house_number = disc.house_number;
+
+                db.SaveChanges();
+
+                return true;
+            }
+        }
+
+
+        public static bool DeleteAdresses(Models.adresses disc)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                var itemToRemove = db.adresses.SingleOrDefault(x => x.id == disc.id); //returns a single item.
+
+                if (itemToRemove != null)
+                {
+                    db.adresses.Remove(itemToRemove);
+                    db.SaveChanges();
+                }
+
+                return true;
+            }
+        }
+        public static bool DeleteGrades(Models.grades disc)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                var itemToRemove = db.grades.SingleOrDefault(x => x.id == disc.id); //returns a single item.
+
+                if (itemToRemove != null)
+                {
+                    db.grades.Remove(itemToRemove);
+                    db.SaveChanges();
+                }
 
                 return true;
             }
