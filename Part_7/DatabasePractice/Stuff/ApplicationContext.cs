@@ -26,7 +26,8 @@ namespace DatabasePractice.Stuff
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer(@"Server=kyserv;Database=_Institute_;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=kyserv;Database=_Institute_;Trusted_Connection=True;");
+            base.OnConfiguring(optionsBuilder);
         }
     }
 }

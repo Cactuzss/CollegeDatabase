@@ -9,8 +9,8 @@ namespace DatabasePractice.Models
     public class specialities
     {
         public int id { get; set; }
-        public string title { get; set; }
-        public int faculty_id { get; set; }
-        public int qualification { get; set; }
+        public string? title { get; set; }
+        public int? faculty_id { get; set; }
+        public int? qualification { get; set; }
     }
 }

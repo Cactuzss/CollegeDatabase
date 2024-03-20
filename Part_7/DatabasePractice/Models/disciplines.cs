@@ -9,10 +9,10 @@ namespace DatabasePractice.Models
     public class disciplines
     {
         public int id { get; set; }
-        public string title { get; set; }
-        public int hours_of_study { get; set; }
-        public int departament_id { get; set; }
-        public string desctipt{ get; set; }
-        public int control_fofm_id{ get; set; }
+        public int? departament_id { get; set; }
+        public int? control_fofm_id { get; set; }
+        public string? title { get; set; }
+        public int? hours_of_study { get; set; }
+        public String? descript { get; set; }
     }
 }

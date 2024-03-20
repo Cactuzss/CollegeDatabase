@@ -9,8 +9,8 @@ namespace DatabasePractice.Models
     public class grades
     {
         public int id { get; set; }
-        public int student_id { get; set; }
-        public int discipline_id { get; set; }
-        string result { get; set; }
+        public int? student_id { get; set; }
+        public int? discipline_id { get; set; }
+        public string? result { get; set; }
     }
 }
